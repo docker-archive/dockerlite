@@ -104,12 +104,6 @@ do
     . ./$CMD
 done
 
-_dl_internal () {
-    FUN=_dl_$1
-    shift
-    $FUN "$@"
-}
-
 [ "$DOCKERLITE_DEBUG" ] && set -x
 if [ "$1" ]
 then
