@@ -64,7 +64,7 @@ EOF
 	for RETRY in $(seq 1 10)
 	do
 	    sleep 1
-	    PID=$(dl_findpid $CID) || continue
+	    PID=$(dl_findpid $CID 2>/dev/null) || continue
 	    mkdir -p /var/run/netns
 	    rm -f /var/run/netns/$CID
 	    ln -s /proc/$PID/ns/net /var/run/netns/$CID
