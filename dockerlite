@@ -41,7 +41,7 @@ _dl_resolve () {
     NEEDLE=$2
     cd $DOCKERLITE_ROOT/$CLASS
     # Check exact match first
-    [ -d $1/rootfs ] && { echo $1 ; return ; }
+    [ -d $NEEDLE/rootfs ] && { echo $1 ; return ; }
     # Check prefix match on the ID
     FOUND=""
     for DIR in $NEEDLE*
@@ -58,7 +58,9 @@ _dl_resolve () {
 	    ;;
     esac
     # Check names
-    grep -q "^$NEEDLE$" */metadata/name && {
+    # (if no container has a name tag, grep will show a warning,
+    # so we send that to /dev/null)
+    grep -q "^$NEEDLE$" */metadata/name 2>/dev/null && {
 	ls -t $(grep -l "^$NEEDLE$" */metadata/name) | head -n 1 | cut -d/ -f1
 	return
     }
