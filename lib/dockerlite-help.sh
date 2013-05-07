@@ -1,6 +1,6 @@
 # list available commands and their help
 dl_help () {
-    cd $(_dl_sourcedir)
+    cd $(_dl_sourcedir)/lib
     for FILE in dockerlite-*.sh
     do
 	CMD=$FILE

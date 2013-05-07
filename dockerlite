@@ -80,7 +80,7 @@ _dl_zerohash () { sha1sum /dev/null | cut -d" " -f1 ; }
 _dl_cgroup () {
     CID=$1
     NONFATAL=$2
-    MNT=$(grep cgroup /proc/mounts | cut -d" " -f2 | head -n1)
+    MNT=$(grep ^cgroup.*devices /proc/mounts | cut -d" " -f2 | head -n1)
     [ "$MNT" ] || _dl_error "cannot find cgroup mount point"
     [ -d $MNT/lxc/$CID ] && { echo $MNT/lxc/$CID ; return ; }
     [ -d $MNT/$CID ] && { echo $MNT/$CID ; return ; }
@@ -94,7 +94,7 @@ _dl_btrfs () {
 
 cd $(_dl_sourcedir)
 . ./dockerlite.conf
-for CMD in dockerlite-*.sh
+for CMD in lib/dockerlite-*.sh
 do
     . ./$CMD
 done
