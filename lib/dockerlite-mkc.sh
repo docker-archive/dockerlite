@@ -1,5 +1,5 @@
-dl_cmd mkc "create a new container from an image"
-dl_mkc () {
+_dl_cmd mkc "create a new container from an image"
+_dl_mkc () {
     IID=$1
     CNAME=$2
     [ "$IID" ] || _dl_error "must specify base image for container"

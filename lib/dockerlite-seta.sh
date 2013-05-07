@@ -1,5 +1,5 @@
-dl_cmd seta "manually allocate ip address to container"
-dl_seta () {
+_dl_cmd seta "manually allocate ip address to container"
+_dl_seta () {
     CID=$1
     IPADDR=$2
     [ "$CID" ] || _dl_error "must specify container"

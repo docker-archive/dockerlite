@@ -1,5 +1,5 @@
-dl_cmd findpid "find pid of a process within given container"
-dl_findpid () {
+_dl_cmd findpid "find pid of a process within given container"
+_dl_findpid () {
     CID=$1
     [ "$CID" ] || _dl_error "must specify container"
     CID=$(_dl_resolve containers $CID)

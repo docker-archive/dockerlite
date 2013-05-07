@@ -1,4 +1,4 @@
-dl_cmd commit "alias for mki"
-dl_commit () {
-    dl_mki "$@"
+_dl_cmd commit "alias for mki"
+_dl_commit () {
+    _dl_mki "$@"
 }

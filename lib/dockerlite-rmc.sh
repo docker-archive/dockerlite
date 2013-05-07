@@ -1,5 +1,5 @@
-dl_cmd rmc "destroy a container"
-dl_rmc () {
+_dl_cmd rmc "destroy a container"
+_dl_rmc () {
     CID=$1
     [ "$CID" ] || _dl_error "must specify container ID"
     CID=$(_dl_resolve containers $CID)

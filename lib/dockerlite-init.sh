@@ -1,5 +1,5 @@
-dl_cmd init "initialize $DOCKERLITE_ROOT and create the root (empty) image"
-dl_init () {
+_dl_cmd init "initialize $DOCKERLITE_ROOT and create the root (empty) image"
+_dl_init () {
     curl -s https://raw.github.com/dominictarr/JSON.sh/master/JSON.sh > JSON.sh
     chmod +x JSON.sh
 
@@ -18,7 +18,7 @@ dl_init () {
     _dl_btrfs subvol delete $EMPTY
 }
 
-dl_mkloop () {
+_dl_mkloop () {
     [ -d $DOCKERLITE_ROOT ] || mkdir -p $DOCKERLITE_ROOT
     mountpoint -q $DOCKERLITE_ROOT && return
     [ -f $DOCKERLITE_LOOPFILE ] || {

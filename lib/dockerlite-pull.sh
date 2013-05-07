@@ -1,9 +1,9 @@
-dl_cmd pull "pull an image from the docker registry (BROKEN)"
-dl_pull () {
+_dl_cmd pull "pull an image from the docker registry (BROKEN)"
+_dl_pull () {
     _dl_error "sorry, this code is broken for now"
     TAG=$1
     LATEST=$(_dl_curl library/$TAG | grep '"latest"' | cut -d\" -f4)
-    CID=$(dl_mkc $(_dl_zerohash) pull-$TAG-$LATEST)
+    CID=$(_dl_mkc $(_dl_zerohash) pull-$TAG-$LATEST)
     _dl_layerpull $CID $LATEST
 }
 

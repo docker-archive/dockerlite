@@ -1,5 +1,5 @@
-dl_cmd lsa "list ip addresses allocated to containers"
-dl_lsa () {
+_dl_cmd lsa "list ip addresses allocated to containers"
+_dl_lsa () {
     cd $DOCKERLITE_ROOT/networks
     ls
 }

@@ -1,5 +1,5 @@
-dl_cmd mki "create a new image from the state of a container"
-dl_mki () {
+_dl_cmd mki "create a new image from the state of a container"
+_dl_mki () {
     cd "$DOCKERLITE_ROOT"
     CID=$1
     INAME=$2

@@ -93,7 +93,7 @@ _dl_btrfs () {
 }
 
 HELP="dockerlite - a modular containerization engine"
-dl_cmd () {
+_dl_cmd () {
     HELP="$(printf "%s\n%-10s %s\n\n" "$HELP" "$1" "$2")"
 }
 
@@ -104,7 +104,7 @@ do
     . ./$CMD
 done
 
-dl_internal () {
+_dl_internal () {
     FUN=_dl_$1
     shift
     $FUN "$@"
@@ -118,6 +118,6 @@ then
 else
 	CMD=help
 fi
-FUN=dl_$CMD
+FUN=_dl_$CMD
 type -t $FUN | grep -q function || _dl_error "invalid command"
 $FUN "$@"
