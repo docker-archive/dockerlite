@@ -92,6 +92,11 @@ _dl_btrfs () {
     btrfs "$@" >/dev/null || _dl_error "problem with btrfs"
 }
 
+HELP="dockerlite - a modular containerization engine"
+dl_cmd () {
+    HELP="$(printf "%s\n%-10s %s\n\n" "$HELP" "$1" "$2")"
+}
+
 cd $(_dl_sourcedir)
 . ./dockerlite.conf
 for CMD in lib/dockerlite-*.sh

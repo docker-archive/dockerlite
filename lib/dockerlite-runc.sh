@@ -1,4 +1,4 @@
-# run a command in an existing container
+dl_cmd runc "run a command in an existing container"
 dl_runc () {
     CID=$1
     CMD=$2

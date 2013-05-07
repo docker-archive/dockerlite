@@ -1,4 +1,4 @@
-# destroy a container
+dl_cmd rmi "destroy a container"
 dl_rmi () {
     IID=$1
     [ "$IID" ] || _dl_error "must specify image to destroy"

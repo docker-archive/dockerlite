@@ -1,4 +1,4 @@
-# list images
+dl_cmd lsi "list images"
 dl_lsi () {
     cd $DOCKERLITE_ROOT/images
     for IID in *

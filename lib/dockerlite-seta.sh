@@ -1,4 +1,4 @@
-# manually allocate ip address to container
+dl_cmd seta "manually allocate ip address to container"
 dl_seta () {
     CID=$1
     IPADDR=$2

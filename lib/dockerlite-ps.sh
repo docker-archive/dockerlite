@@ -1,4 +1,4 @@
-# list containers and their runtime information
+dl_cmd ps "list containers and their runtime information"
 dl_ps () {
     cd $DOCKERLITE_ROOT/containers
     printf "%-8s %-30s %-40s %-30s %-30s %-30s %s\n" "ID" "CONTAINER NAME" "BASE IMAGE" "CREATED" "STARTED" "CMD" "RUNNING"

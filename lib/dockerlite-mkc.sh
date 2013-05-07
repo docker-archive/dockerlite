@@ -1,4 +1,4 @@
-# create a new container from an image
+dl_cmd mkc "create a new container from an image"
 dl_mkc () {
     IID=$1
     CNAME=$2

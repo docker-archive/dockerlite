@@ -1,4 +1,4 @@
-# show root fs of a container
+dl_cmd rootfs "show root fs of a container"
 dl_rootfs () {
     CID=$1
     [ "$1" ] || error "must specify container"

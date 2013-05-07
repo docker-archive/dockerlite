@@ -1,4 +1,4 @@
-# get a shell in a container (without containerization)
+dl_cmd chroot "get a shell in a container (without containerization)"
 dl_chroot () {
     CID=$1
     [ "$1" ] || error "must specify container to chroot to"

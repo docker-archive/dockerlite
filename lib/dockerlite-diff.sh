@@ -1,4 +1,4 @@
-# show differences between a container and its base image
+dl_cmd diff "show differences between a container and its base image"
 dl_diff () {
     CID=$1
     [ "$CID" ] || _dl_error "must specify container to diff"

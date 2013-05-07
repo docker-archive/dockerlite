@@ -1,4 +1,4 @@
-# check if a container is running
+dl_cmd running "check if a container is running"
 dl_running () {
     CID=$1
     [ "$CID" ] || _dl_error "must specify container"

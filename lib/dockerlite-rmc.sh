@@ -1,4 +1,4 @@
-# destroy a container
+dl_cmd rmc "destroy a container"
 dl_rmc () {
     CID=$1
     [ "$CID" ] || _dl_error "must specify container ID"

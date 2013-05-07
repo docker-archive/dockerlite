@@ -1,4 +1,4 @@
-# pull an image from the docker registry (BROKEN)
+dl_cmd pull "pull an image from the docker registry (BROKEN)"
 dl_pull () {
     _dl_error "sorry, this code is broken for now"
     TAG=$1

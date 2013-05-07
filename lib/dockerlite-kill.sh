@@ -1,4 +1,4 @@
-# terminate a runaway container
+dl_cmd kill "terminate a runaway container"
 dl_kill () {
     CID=$1
     [ "$CID" ] || _dl_error "must specify container to kill"

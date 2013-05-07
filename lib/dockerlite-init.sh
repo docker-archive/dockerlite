@@ -1,4 +1,4 @@
-# initialize $DOCKERLITE_ROOT and create the root (empty) image
+dl_cmd init "initialize $DOCKERLITE_ROOT and create the root (empty) image"
 dl_init () {
     curl -s https://raw.github.com/dominictarr/JSON.sh/master/JSON.sh > JSON.sh
     chmod +x JSON.sh
