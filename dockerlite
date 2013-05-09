@@ -41,7 +41,7 @@ _dl_resolve () {
     NEEDLE=$2
     cd $DOCKERLITE_ROOT/$CLASS
     # Check exact match first
-    [ -d $NEEDLE/rootfs ] && { echo $1 ; return ; }
+    [ -d $NEEDLE/rootfs ] && { echo $NEEDLE ; return ; }
     # Check prefix match on the ID
     FOUND=""
     for DIR in $NEEDLE*
