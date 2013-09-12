@@ -61,7 +61,7 @@ _dl_cgroup () {
     [ -d $MNT/$CID ] && { echo $MNT/$CID ; return ; }
     [ "$NONFATAL" ] || _dl_error "cannot find cgroup for container $CID"
 }
-eval "_dl_sourcedir () { echo $(readlink -f $(dirname "$0")); }"
+eval "_dl_sourcedir () { echo $(dirname $(readlink -f "$0")); }"
 
 _dl_btrfs () {
     btrfs "$@" >/dev/null || _dl_error "problem with btrfs"
