@@ -25,12 +25,12 @@ including your dog can write shell scripts, right?
 
 ## Installation
 
-See INSTALL.md.
+See [INSTALL.md](INSTALL.md).
 
 
 ## How to use it
 
-See MANUAL.md.
+See [MANUAL.md](MANUAL.md).
 
 
 ## What's "lightweight" virtualization?
