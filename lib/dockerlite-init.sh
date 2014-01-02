@@ -1,7 +1,9 @@
 _dl_cmd init "initialize $DOCKERLITE_ROOT and create the root (empty) image"
 _dl_init () {
-    curl -s https://raw.github.com/dominictarr/JSON.sh/master/JSON.sh > JSON.sh
-    chmod +x JSON.sh
+    # If for some reason, we cannot "vendor in" JSON.sh, we could download
+    # it here, when the image store is initialized.
+    #curl -s https://raw.github.com/dominictarr/JSON.sh/master/JSON.sh > JSON.sh
+    #chmod +x JSON.sh
 
     cd $DOCKERLITE_ROOT
     mkdir -p images
